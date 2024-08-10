@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(135deg, rgba(128, 0, 128, 0.8), rgba(75, 0, 130, 0.8));
+            color: white;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: white;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: purple;
+        }
+
+        .container {
+            margin-top: 80px; /* Space for fixed header */
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px; /* Rounded corners */
+            overflow: hidden; /* Ensure contents stay within rounded corners */
+            margin-bottom: 20px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 100%; /* Ensure card takes full width of its column */
+            max-width: 300px; /* Limit card width */
+            margin: 20px auto; /* Center the card horizontally */
+            position: relative;
+        }
+
+        .card-body {
+            padding: 20px;
+            background-color: rgba(128, 0, 128, 0.9); /* Purple with opacity */
+            z-index: 1; /* Ensure text is above image */
+        }
+
+        .card-image {
+            position: absolute;
+            top: -30px; /* Position image half outside the card */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px; /* Width of the image */
+            height: 100px; /* Height of the image */
+            opacity: 0.5;
+            z-index: 0; /* Ensure image is behind card content */
+        }
+
+        .card:nth-child(1) .card-body {
+            background-color: #6a0dad; /* Deep Purple */
+        }
+
+        .card:nth-child(2) .card-body {
+            background-color: #8a2be2; /* Blue Violet */
+        }
+
+        .card:nth-child(3) .card-body {
+            background-color: #7b68ee; /* Medium Slate Blue */
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: bold; /* Bold headings */
+        }
+
+        .card-text {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8a2be2, #6a0dad); /* Gradient background */
+            border: none;
+            border-radius: 5px;
+            font-weight: bold; /* Bold text */
+            padding: 10px 20px; /* Increase padding for emphasis */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #6a0dad, #5a00a1); /* Darker gradient on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">QuizzBee</div>
+</div>
+
+<div class="container">
+    <h1 class="text-center text-white">Student's Dashboard</h1>
+    <div class="row justify-content-center mt-4">
+        <!-- MERN Developer Quiz Card -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="/public/images/animated1.png" alt="Animated Image 1" class="card-image">
+                <div class="card-body">
+                    <h5 class="card-title">MERN Developer Quiz</h5>
+                    <p class="card-text">Choose a quiz related to MERN stack development.</p>
+                    <a href="/student/quiz/mern" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+        <!-- App Developer Quiz Card -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="/public/images/animated2.png" alt="Animated Image 2" class="card-image">
+                <div class="card-body">
+                    <h5 class="card-title">App Developer Quiz</h5>
+                    <p class="card-text">Choose a quiz related to app development.</p>
+                    <a href="/student/quiz/app" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+        <!-- Graphics Quiz Card -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="/public/images/animated3.png" alt="Animated Image 3" class="card-image">
+                <div class="card-body">
+                    <h5 class="card-title">Graphics Quiz</h5>
+                    <p class="card-text">Choose a quiz related to graphics design.</p>
+                    <a href="/student/quiz/graphics" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
